@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+      method="post"
+      onsubmit="onSubmit()"
+    >
       <fieldset name="personal-info"
         id="personal-info-fieldset"
         class="fieldset"
@@ -94,6 +97,7 @@
           <input type="password"
             name="email"
             id="password-input"
+            minlength="4"
             required
           >
         </div>
@@ -158,6 +162,31 @@
           >
         </div>
       </fieldset>
+
+      <fieldset name="info"
+        id="info"
+        class="fieldset"
+      >
+        <legend>Additional info:</legend>
+        <div class="form-field">
+          <label for="comment">Comments:</label>
+          <textarea name="comment"
+            id="comment"
+            cols="30"
+            rows="2"
+            maxlength="100"
+         ></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="recomend-select">Would you recomend us?</label>
+          <select name="recomend" id="recomend-select">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </fieldset>
+      <button type="submit">Submit</button>
     </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
