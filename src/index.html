@@ -4,14 +4,69 @@
     <meta charset="UTF-8">
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    >
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+      <fieldset name="personal-info"
+        id="personal-info-fieldset"
+        class="fieldset"
+      >
+        <legend>Personal information</legend>
+
+        <div class="form-field">
+          <label for="surname-input">Surname:</label>
+          <input
+            type="text"
+            id="surname-input"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="name-input">Name:</label>
+          <input
+            type="text"
+            id="name-input"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="age-input">How old are You?</label>
+          <input
+            type="number"
+            id="age-input"
+            value="12"
+            max="100"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="date-of-birth-input">Full date of birth:</label>
+          <input
+            type="date"
+            id="date-of-birth-input"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="terms-input">I accept the term of the agreement</label>
+          <input
+            type="checkbox"
+            id="terms-input"
+            required
+          >
+        </div>
+
+      </fieldset>
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
